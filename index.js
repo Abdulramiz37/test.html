@@ -19,10 +19,9 @@ async function pushUniversitiesList()
 
 }
 
-function getUniversities()
+function getUniversities(a)
 {
-
-    let data = fetch(`http://universities.hipolabs.com/search?country=${countryname}`)
+    let data = fetch(`http://universities.hipolabs.com/search?country=india`)
     .then(response => {
         return response.json();
     })
@@ -63,4 +62,6 @@ function updateUniversitiesList(searchList)
         li.classList.add("list-group-item");
         list.appendChild(li);
     });
+}
+
 }
